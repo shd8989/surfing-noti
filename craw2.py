@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # 2-1. 필요 라이브러리 import
 from selenium import webdriver as wd
 from selenium.webdriver.common.by import By
@@ -13,7 +14,7 @@ import pandas as pd
 driver_path="C:\\chromedriver_win32\\chromedriver.exe"
 keyword="웨이크서핑"
 url = "https://www.instagram.com/explore/tags/{}/".format(keyword)
-facebook_login_page_css=".sqdOP.yWX7d.y3zKF"
+facebook_login_page_css=".sqdOP.L3NKy.y3zKF.ZIAjV"
 facebook_id_form_id="email"
 facebook_pw_form_id="pass"
 facebook_login_btn_id="loginbutton"
@@ -24,14 +25,14 @@ time.sleep(10)
 
 print("login start")
 facebook_login_btn = driver.find_element_by_css_selector(facebook_login_page_css)
+#url = driver.find_element(By.CLASS_NAME, 'lst_total')
+#lis = url.find_element(By.CLASS_NAME, 'bx')
 facebook_login_btn.click()
 time.sleep(10)
 
-...
-login_btn = driver.find_element_by_id(facebook_login_btn_id)
-login_btn.click()
-time.sleep(5)
-...
+#login_btn = driver.find_element_by_id(facebook_login_btn_id)
+#login_btn.click()
+#time.sleep(5)
 
 id_input_form = driver.find_element_by_id(facebook_id_form_id)
 pw_input_form = driver.find_element_by_id(facebook_pw_form_id)
